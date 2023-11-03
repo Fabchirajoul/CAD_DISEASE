@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style(1).css">
+    <script src="//unpkg.com/alpinejs" defer></script>
+    <script src="methods.js"></script>
+</head>
+<body x-data="heartBeatBackEnd">
+    <header>
+        <div id="header-image-container">
+            <img id="header-image" src="header.jpg" alt="Header Image">
+        </div>
+    </header>
+    
+    <div class="welcome-text">
+        <h1>Welcome</h1>
+        <p>Already a member? Login</p>
+    </div>
+    <div class="main">
+        <div class="form">
+            <label>Username: </label><input type="text"> <br>
+        </div>
+        <div class="form">
+            <label>Password: </label><input type="text">
+        </div>
+        <div class="form">
+            <label style="margin-right: 7em;">Occupation: </label>
+            <select name="occupatin" x-model="occupation" id="occupation">
+                <option value="Physician">
+                    Physician
+                </option>
+                <option value="Cardiologist">
+                    Cardiologist
+                </option>
+            </select>
+        </div>
+        <div class="button" @click="login();">
+            Login
+        </div>
+    </div>
+    <div class="welcome-text">
+        <p>Or Join our network of professionals <a href="register.html">Register</a></p>
+    </div>
+    <br>
+    <br>
+    <section class="footer">
+        Copyright © Group 6 2023
+    </section>
+</body>
+</html>
